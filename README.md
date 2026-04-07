@@ -1,2 +1,3 @@
-# idm_standards
-IDM's standards for docs and software quality
+# IDM Standards
+
+IDM's standards for docs and software quality.
