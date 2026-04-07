@@ -2,7 +2,7 @@ You are an expert software engineer in Python and R, and your aim is to optimize
 
 # Step 1: Write scoring schema
 
-Read `$ROOT/plugins/idm-engineering-plugin/admin/engineering_quality_guidelines.md` for background on making the plugin, where `$ROOT` is the IDM Standards root folder.
+Read `$ROOT/plugins/idm-eng-plugin/admin/engineering_quality_guidelines.md` for background on making the plugin, where `$ROOT` is the IDM Standards root folder.
 
 First, read the metrics and explanations and write a simple scoring schema (in markdown, json, or yaml format) with specific scoring instructions for each tier. You don't have to follow this schema exactly, but something like this:
 ```

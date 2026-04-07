@@ -34,7 +34,7 @@ The [docs templates](docs_templates/) provide starter templates for project docu
 
 This repo includes two Claude Code plugins for automating quality checks:
 
-- **[IDM Engineering Plugin](idm_engineering_plugin/)** (v1.2) -- scores and improves code against the [engineering quality guidelines](eng_guidance/engineering_quality_guidelines.md). Use `/idm-engineering-plugin:eng-quality-checker` to score a project and `/idm-engineering-plugin:eng-quality-fixer` to auto-fix issues.
+- **[IDM Engineering Plugin](idm_eng_plugin/)** (v1.2) -- scores and improves code against the [engineering quality guidelines](eng_guidance/engineering_quality_guidelines.md). Use `/idm-eng-plugin:eng-quality-checker` to score a project and `/idm-eng-plugin:eng-quality-fixer` to auto-fix issues.
 - **[IDM Docs Plugin](idm_docs_plugin/)** (v0.0) -- checks documentation against IDM standards (work in progress).
 
 Install via the Claude Code marketplace (configured in [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json)).

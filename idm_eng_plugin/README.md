@@ -1,11 +1,11 @@
-# IDM-Engineering-Plugin
+# IDM-Eng-Plugin
 
 A Claude Code plugin that scores and improves scientific research code against the [IDM Software Engineering Quality Guidelines](https://github.com/InstituteforDiseaseModeling).
 
 ## Features
 
-- **Engineering Quality Checker** (`/idm-engineering-plugin:eng-quality-checker`): Evaluates a project across 10 metrics in three categories (quality, usability, safety) and produces a scored report with recommendations.
-- **Engineering Quality Fixer** (`/idm-engineering-plugin:eng-quality-fixer`): Reads the score report and implements prioritized, feasible improvements automatically.
+- **Engineering Quality Checker** (`/idm-eng-plugin:eng-quality-checker`): Evaluates a project across 10 metrics in three categories (quality, usability, safety) and produces a scored report with recommendations.
+- **Engineering Quality Fixer** (`/idm-eng-plugin:eng-quality-fixer`): Reads the score report and implements prioritized, feasible improvements automatically.
 
 ## Quality Tiers
 
@@ -37,10 +37,10 @@ A Claude Code plugin that scores and improves scientific research code against t
 ### Score a project
 
 ```
-/idm-engineering-plugin:eng-quality-checker                    # score current directory at tier 2
-/idm-engineering-plugin:eng-quality-checker . 3                # score current directory at tier 3
-/idm-engineering-plugin:eng-quality-checker /path/to/repo 1    # score a local path at tier 1
-/idm-engineering-plugin:eng-quality-checker https://github.com/org/repo 2   # score a GitHub repo
+/idm-eng-plugin:eng-quality-checker                    # score current directory at tier 2
+/idm-eng-plugin:eng-quality-checker . 3                # score current directory at tier 3
+/idm-eng-plugin:eng-quality-checker /path/to/repo 1    # score a local path at tier 1
+/idm-eng-plugin:eng-quality-checker https://github.com/org/repo 2   # score a GitHub repo
 ```
 
 Output: `engineering_score.md` written to the project directory.
@@ -48,8 +48,8 @@ Output: `engineering_score.md` written to the project directory.
 ### Fix a project
 
 ```
-/idm-engineering-plugin:eng-quality-fixer                     # fix current directory
-/idm-engineering-plugin:eng-quality-fixer /path/to/repo       # fix a specific path
+/idm-eng-plugin:eng-quality-fixer                     # fix current directory
+/idm-eng-plugin:eng-quality-fixer /path/to/repo       # fix a specific path
 ```
 
 Requires `engineering_score.md` to exist (run the checker first).

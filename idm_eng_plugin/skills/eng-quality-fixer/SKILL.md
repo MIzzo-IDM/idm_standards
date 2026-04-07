@@ -1,6 +1,6 @@
 ---
 name: eng-quality-fixer
-description: The Engineering Quality Fixer skill reads recommendations from a engineering_score.md report and implements prioritized improvements to the project. Use this skill when the user asks to "fix my project", "implement the recommendations", "improve my project score", "apply engineering fixes", or invokes /idm-engineering-plugin:eng-quality-fixer. Also use when the user says "now fix it" after running the quality checker.
+description: The Engineering Quality Fixer skill reads recommendations from a engineering_score.md report and implements prioritized improvements to the project. Use this skill when the user asks to "fix my project", "implement the recommendations", "improve my project score", "apply engineering fixes", or invokes /idm-eng-plugin:eng-quality-fixer. Also use when the user says "now fix it" after running the quality checker.
 argument-hint: "[project_path]"
 allowed-tools: Read, Glob, Grep, Bash, Write, Edit
 ---
@@ -14,7 +14,7 @@ Skill version: 1.2_2026.03.31
 1. If the user provided a `project_path`, look for `engineering_score.md` in that directory.
 2. Otherwise, look in the current working directory.
 3. If the file does not exist, stop and tell the user:
-   > "No `engineering_score.md` found. Please run `/idm-engineering-plugin:eng-quality-checker` first to generate the report."
+   > "No `engineering_score.md` found. Please run `/idm-eng-plugin:eng-quality-checker` first to generate the report."
 
 Read the full contents of `engineering_score.md` — particularly the **Recommendations** and **Full Results** sections.
 
@@ -206,7 +206,7 @@ After completing all feasible changes, provide a concise summary:
 
 Estimated score impact: quality.clear +2, usability.documented +2, safety.reproducible +2, usability.accessible +3
 
-Re-run `/idm-engineering-plugin:eng-quality-checker` to get an updated score.
+Re-run `/idm-eng-plugin:eng-quality-checker` to get an updated score.
 ```
 
 ## Notes

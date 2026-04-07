@@ -1,6 +1,6 @@
 ---
 name: eng-quality-checker
-description: The Engineering Quality Checker skill scores a software project against IDM engineering quality tiers (1–3) across quality, usability, and safety metrics. Use this skill when the user asks to "score my project", "check engineering quality", "evaluate code quality", "assess tier compliance", "run quality checker", or invokes /idm-engineering-plugin:eng-quality-checker. Also use proactively when the user says "how good is this code?" or "what improvements does this project need?".
+description: The Engineering Quality Checker skill scores a software project against IDM engineering quality tiers (1–3) across quality, usability, and safety metrics. Use this skill when the user asks to "score my project", "check engineering quality", "evaluate code quality", "assess tier compliance", "run quality checker", or invokes /idm-eng-plugin:eng-quality-checker. Also use proactively when the user says "how good is this code?" or "what improvements does this project need?".
 argument-hint: "[project_path_or_github_url] [tier]"
 allowed-tools: Read, Glob, Grep, Bash, Write, Agent, WebFetch
 ---
@@ -49,7 +49,7 @@ Launch all three agents **simultaneously** using the Agent tool with `subagent_t
 
 ### quality-scorer prompt:
 ```
-You are the quality-scorer agent for the idm-engineering-plugin.
+You are the quality-scorer agent for the idm-eng-plugin.
 
 Project path: <project>
 Tier: <tier>
@@ -84,7 +84,7 @@ Return ONLY a JSON object (no other text):
 
 ### usability-scorer prompt:
 ```
-You are the usability-scorer agent for the idm-engineering-plugin.
+You are the usability-scorer agent for the idm-eng-plugin.
 
 Project path: <project>
 Tier: <tier>
@@ -121,7 +121,7 @@ Return ONLY a JSON object (no other text). Include only non-N/A metrics:
 
 ### safety-scorer prompt:
 ```
-You are the safety-scorer agent for the idm-engineering-plugin.
+You are the safety-scorer agent for the idm-eng-plugin.
 
 Project path: <project>
 Tier: <tier>
