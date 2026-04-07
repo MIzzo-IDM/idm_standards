@@ -26,4 +26,4 @@ Use email for communication with external collaborators, formal requests, and an
 
 - If you're stuck on something for more than ~30 minutes, ask for help.
 - Document decisions and context in GitHub issues or PRs, not just in Teams (where messages get buried).
-- When in doubt about process or conventions, check the [style guide](https://github.com/InstituteforDiseaseModeling/idm_standards/style_guide) or ask a teammate.
+- When in doubt about process or conventions, check the [engineering guidance](https://github.com/InstituteforDiseaseModeling/idm_standards/eng_guidance) or ask a teammate.

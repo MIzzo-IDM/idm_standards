@@ -4,9 +4,9 @@ pagetitle: "Coding guidelines"
 
 # Coding guidelines
 
-## Style guide
+## Engineering guidance
 
-All code should follow the conventions in the [IDM style guide](https://github.com/InstituteforDiseaseModeling/idm_standards/style_guide). This covers Python and R style, documentation, testing, and design philosophy.
+All code should follow the conventions in the [IDM engineering guidance](https://github.com/InstituteforDiseaseModeling/idm_standards/eng_guidance). This covers Python and R style, documentation, testing, and design philosophy.
 
 ## Engineering guide
 

@@ -8,20 +8,20 @@ New to IDM? Start with the [getting started](getting_started/) guides:
 
 - [Python setup](getting_started/1_python.md) -- setting up your development environment
 - [AI tools](getting_started/2_ai.md) -- getting started with Claude Code and plugins
-- [Coding guidelines](getting_started/3_guidelines.md) -- reference to our style guide and conventions
+- [Coding guidelines](getting_started/3_guidelines.md) -- reference to our engineering guidance and conventions
 - [Communication](getting_started/4_comms.md) -- GitHub, Teams, meetings, and team culture
 
-## Style guide
+## Engineering guidance
 
-The [style guide](style_guide/) covers IDM's conventions for writing research software:
+The [engineering guidance](eng_guidance/) covers IDM's conventions for writing research software:
 
-- [Philosophy](style_guide/1_philosophy.md) -- design principles and priorities
-- [Python](style_guide/2_python.md) -- Python style conventions (Google style + IDM house rules)
-- [Tests](style_guide/3_tests.md) -- testing practices for scientific code
-- [Documentation](style_guide/4_documentation.md) -- standards for READMEs, docstrings, and tutorials
-- [Other](style_guide/5_other.md) -- miscellaneous principles (e.g., data security)
-- [Zen](style_guide/6_zen.md) -- short principles and credos
-- [Engineering quality guidelines](style_guide/engineering_quality_guidelines.md) -- 10 metrics across 3 categories (quality, usability, safety) applied to 3 code tiers
+- [Philosophy](eng_guidance/1_philosophy.md) -- design principles and priorities
+- [Python](eng_guidance/2_python.md) -- Python style conventions (Google style + IDM house rules)
+- [Tests](eng_guidance/3_tests.md) -- testing practices for scientific code
+- [Documentation](eng_guidance/4_documentation.md) -- standards for READMEs, docstrings, and tutorials
+- [Other](eng_guidance/5_other.md) -- miscellaneous principles (e.g., data security)
+- [Zen](eng_guidance/6_zen.md) -- short principles and credos
+- [Engineering quality guidelines](eng_guidance/engineering_quality_guidelines.md) -- 10 metrics across 3 categories (quality, usability, safety) applied to 3 code tiers
 
 ## Documentation templates
 
@@ -34,7 +34,7 @@ The [docs templates](docs_templates/) provide starter templates for project docu
 
 This repo includes two Claude Code plugins for automating quality checks:
 
-- **[IDM Engineering Plugin](idm_engineering_plugin/)** (v1.2) -- scores and improves code against the [engineering quality guidelines](style_guide/engineering_quality_guidelines.md). Use `/idm-engineering-plugin:eng-quality-checker` to score a project and `/idm-engineering-plugin:eng-quality-fixer` to auto-fix issues.
+- **[IDM Engineering Plugin](idm_engineering_plugin/)** (v1.2) -- scores and improves code against the [engineering quality guidelines](eng_guidance/engineering_quality_guidelines.md). Use `/idm-engineering-plugin:eng-quality-checker` to score a project and `/idm-engineering-plugin:eng-quality-fixer` to auto-fix issues.
 - **[IDM Docs Plugin](idm_docs_plugin/)** (v0.0) -- checks documentation against IDM standards (work in progress).
 
 Install via the Claude Code marketplace (configured in [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json)).

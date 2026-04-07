@@ -4,7 +4,7 @@ Welcome to [IDM](https://idmodorg.org) team! This guide covers everything you ne
 
 - [**Python**](1_python.md) -- Setting up Python
 - [**AI**](2_ai.md) -- Getting started with AI-assisted development
-- [**Guidelines**](3_guidelines.md) -- Coding conventions and style guide
+- [**Guidelines**](3_guidelines.md) -- Coding conventions and engineering guidance
 - [**Communication**](4_comms.md) -- Communication channels and culture
 
 _Last updated:_ 2026.04.07
