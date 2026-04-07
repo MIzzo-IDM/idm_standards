@@ -4,24 +4,24 @@ pagetitle: "Installing Python"
 
 # Installing Python
 
-This guide presents three options for getting up and running with Starsim. It assumes no prior knowledge of Python. If you have used Python before and know what setup you prefer, you are always welcome to use that; Starsim works with (virtually) any Python installation.
+This guide presents three options for getting up and running with Python. It assumes no prior knowledge of Python. If you have used Python before and know what setup you prefer, you are always welcome to use that.
 
 Note: since this document assumes you have no prior Python experience, it does not discuss [virtual environments](https://code.visualstudio.com/docs/python/environments). These are useful (sometimes critical) for juggling multiple different Python projects. However, if you will primarily be working on one Python project at a time, or working on a set of projects that all have similar dependencies, you probably don't need them.
 
 
 ## Editor options
 
-Before installing Starsim, you need to install a Python environment and editor.
+Before getting started, you need to install a Python environment and editor.
 
 ### Option 1: VS Code (recommended)
 
-VS Code is by far the most commonly used editor among Starsim team members due to its excellent Python and AI support.
+VS Code is by far the most commonly used editor among IDM team members due to its excellent Python and AI support.
 
 1. Download and install [VS Code](https://code.visualstudio.com/).
 2. Install the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 3. VS Code will prompt you to install Python if it's not already on your system. Alternatively, download Python from [python.org](https://www.python.org/downloads/).
-4. From the terminal inside VS Code, install Starsim: `pip install starsim`
-5. Check that it worked: create a file called e.g. `demo.py` with the contents `import starsim as ss; ss.demo()`, and then click on the play button at the top right of the editor. The script should run, produce text output, and produce a plot.
+4. From the terminal inside VS Code, install your project's dependencies: `pip install -r requirements.txt` (or similar).
+5. Check that it worked: create a file called e.g. `demo.py` with a simple script, and then click on the play button at the top right of the editor.
 
 More info: [VS Code Python tutorial](https://code.visualstudio.com/docs/python/python-tutorial)
 
@@ -38,8 +38,8 @@ If you are coming from an [RStudio](https://posit.co/download/rstudio-desktop/) 
 
 1. Install [Miniforge](https://conda-forge.org/download/). This will add the commands `python`, `conda`, and `pip` (among others) to your terminal.
 2. From your terminal, install Spyder: `conda install spyder`
-3. Install Starsim: `pip install starsim`
-4. Check that it worked: from the Spyder console, run `import starsim as ss; ss.demo()`. This should produce text output and produce a plot. (Note: if you want your plots to appear as new windows rather than in the "Plots" pane, you can change this option under Tools → Preferences.)
+3. Install your project's dependencies: `pip install -r requirements.txt` (or similar).
+4. Check that it worked: from the Spyder console, run a simple script to verify your setup. (Note: if you want your plots to appear as new windows rather than in the "Plots" pane, you can change this option under Tools → Preferences.)
 
 More info: [Conda getting started](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) | [Spyder docs](https://docs.spyder-ide.org/)
 

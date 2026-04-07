@@ -21,28 +21,21 @@ pagetitle: "AI-assisted development"
 - Claude Code can read and edit files, run terminal commands, search your codebase, and more.
 - Use `/help` within Claude Code for a full list of commands.
 
-## Installing the Starsim AI plugin
+## Installing plugins
 
-The [starsim-ai](https://github.com/starsimhub/starsim_ai) plugin gives Claude Code specialized knowledge about the Starsim framework -- including architecture, style conventions, and API patterns.
+Claude Code plugins give Claude specialized knowledge about specific frameworks and tools.
 
-To install:
+To install a plugin:
 
 1. Type `/` to see the command menu (or click on the slash button)
 2. Click on "Manage plugins"
 3. Go to "Marketplaces"
-4. Add <https://github.com/starsimhub/starsim_ai>
-5. Select "Starsim-AI" (and any other plugins you want from that marketplace)
-6. Go back to the list of plugins, find Starsim-AI, and click "Install".
+4. Add the marketplace URL for the plugin you want to install
+5. Select the plugin(s) you want from that marketplace
+6. Go back to the list of plugins, find the plugin, and click "Install".
 7. Restart VS Code.
 
-Once installed, Claude Code will automatically use the plugin's skills when you're working on Starsim projects. This includes guidance on:
-
-- Simulation setup and configuration
-- Disease models, networks, and interventions
-- Calibration and analysis
-- Starsim coding style and conventions
-
-_Note:_ While Claude usually picks up the Starsim-AI plugin automatically, you can also ask to use it explicitly, e.g. "Use the Starsim-AI plugin to help me create tests for this project."
+Once installed, Claude Code will automatically use the plugin's skills when you're working on relevant projects.
 
 ## Cursor
 

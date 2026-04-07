@@ -1,31 +1,24 @@
 {
-  "name": "starsim-marketplace",
+  "name": "idm-standards",
   "owner": {
-    "name": "StarsimHub"
+    "name": "IDM"
   },
   "metadata": {
-    "description": "Starsim-aware AI skills and MCP tools"
+    "description": "AI skills for IDM standards"
   },
   "plugins": [
     {
-      "name": "starsim-ai",
-      "source": "./plugins/starsim",
-      "description": "Starsim and Sciris MCP tools and modeling skills",
-      "version": "1.2_2026.02.25",
-      "keywords": ["starsim", "sciris", "disease-modeling", "epidemiology"]
+      "name": "idm-docs-plugin",
+      "source": "./plugins/idm-docs-plugin",
+      "description": "Score and improve documentation against IDM documentation guidelines",
+      "version": "1.0_2026.04.07",
+      "keywords": ["quality", "scoring", "software", "documentation"]
     },
     {
-      "name": "disease-modeling",
-      "source": "./plugins/disease_modeling",
-      "description": "General disease modeling skills and tools",
-      "version": "0.1.0",
-      "keywords": ["disease-modeling", "epidemiology", "compartmental-models"]
-    },
-    {
-      "name": "project-improver",
-      "source": "./plugins/project-improver",
+      "name": "idm-engineering-plugin",
+      "source": "./plugins/idm-engineering-plugin",
       "description": "Score and improve scientific research code quality, usability, and safety against IDM engineering quality tiers",
-      "version": "1.2_2026.03.31",
+      "version": "1.0_2026.04.07",
       "keywords": ["quality", "scoring", "scientific", "python", "r", "engineering"]
     }
   ]

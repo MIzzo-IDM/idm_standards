@@ -1,13 +1,13 @@
 ---
 description: >
   Scores the safety metrics (compliant, reproducible) of a software project against IDM
-  engineering quality guidelines. Dispatched by the project-scorer skill. Use this agent
+  engineering quality guidelines. Dispatched by the eng-quality-checker skill. Use this agent
   when asked to check for license compliance, exposed secrets, dependency management,
   or reproducibility of a project.
 
   Examples:
   <example>
-  Context: project-scorer skill is running
+  Context: eng-quality-checker skill is running
   user: "Score this project for safety"
   assistant: "I'll use the safety-scorer agent to evaluate compliant and reproducible metrics."
   <commentary>Safety scoring task — dispatch safety-scorer agent.</commentary>

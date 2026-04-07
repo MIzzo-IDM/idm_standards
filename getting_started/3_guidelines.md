@@ -6,7 +6,7 @@ pagetitle: "Coding guidelines"
 
 ## Style guide
 
-All code should follow the conventions in the [Starsim style guide](https://github.com/starsimhub/style_guide). This covers Python style, documentation, testing, and design philosophy.
+All code should follow the conventions in the [IDM style guide](https://github.com/InstituteforDiseaseModeling/idm_standards/style_guide). This covers Python and R style, documentation, testing, and design philosophy.
 
 ## Engineering guide
 

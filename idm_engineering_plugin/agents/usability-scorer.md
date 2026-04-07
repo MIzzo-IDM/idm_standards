@@ -2,12 +2,12 @@
 description: >
   Scores the usability metrics (simple, powerful, performant, documented, accessible) of a
   software project against IDM engineering quality guidelines. Dispatched by the
-  project-scorer skill. Use this agent when asked to evaluate API design, documentation
+  eng-quality-checker skill. Use this agent when asked to evaluate API design, documentation
   quality, performance, or accessibility of a project.
 
   Examples:
   <example>
-  Context: project-scorer skill is running
+  Context: eng-quality-checker skill is running
   user: "Score this project for usability"
   assistant: "I'll use the usability-scorer agent to evaluate simple, powerful, performant, documented, and accessible metrics."
   <commentary>Usability scoring task — dispatch usability-scorer agent.</commentary>

@@ -1,12 +1,12 @@
 ---
 description: >
   Scores the quality metrics (correct, clear, concise) of a software project against IDM
-  engineering quality guidelines. Dispatched by the project-scorer skill. Use this agent
+  engineering quality guidelines. Dispatched by the eng-quality-checker skill. Use this agent
   when asked to evaluate correctness, code clarity, or code conciseness of a project.
 
   Examples:
   <example>
-  Context: project-scorer skill is running
+  Context: eng-quality-checker skill is running
   user: "Score this project for quality"
   assistant: "I'll use the quality-scorer agent to evaluate correct, clear, and concise metrics."
   <commentary>Quality scoring task — dispatch quality-scorer agent.</commentary>

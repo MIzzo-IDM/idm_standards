@@ -1,6 +1,6 @@
 ---
-name: Project Scorer
-description: The Project Scorer skill scores a software project against IDM engineering quality tiers (1–3) across quality, usability, and safety metrics. Use this skill when the user asks to "score my project", "check engineering quality", "evaluate code quality", "assess tier compliance", "run project scorer", or invokes /project-improver:project-scorer. Also use proactively when the user says "how good is this code?" or "what improvements does this project need?".
+name: eng-quality-checker
+description: The Engineering Quality Checker skill scores a software project against IDM engineering quality tiers (1–3) across quality, usability, and safety metrics. Use this skill when the user asks to "score my project", "check engineering quality", "evaluate code quality", "assess tier compliance", "run quality checker", or invokes /idm-engineering-plugin:eng-quality-checker. Also use proactively when the user says "how good is this code?" or "what improvements does this project need?".
 argument-hint: "[project_path_or_github_url] [tier]"
 allowed-tools: Read, Glob, Grep, Bash, Write, Agent, WebFetch
 ---
@@ -30,12 +30,12 @@ The user provides two arguments:
 - Tier 2: Small-scale project used by multiple people or projects
 - Tier 3: One-off/exploratory code used by one person
 
-**If a GitHub URL is given**: Use `gh repo clone <url> /tmp/project-scorer-$(date +%s)` to clone to a temporary directory. Set `project` to that path.
+**If a GitHub URL is given**: Use `gh repo clone <url> /tmp/eng-quality-checker-$(date +%s)` to clone to a temporary directory. Set `project` to that path.
 
 ## Step 2: Read the Scoring Schema
 
 Read the full schema from:
-`$CLAUDE_PLUGIN_ROOT/skills/project-scorer/scoring-schema.yaml`
+`$CLAUDE_PLUGIN_ROOT/skills/eng-quality-checker/scoring-schema.yaml`
 
 This file contains:
 - Category weights (quality 40%, usability 40%, safety 20%)
@@ -49,7 +49,7 @@ Launch all three agents **simultaneously** using the Agent tool with `subagent_t
 
 ### quality-scorer prompt:
 ```
-You are the quality-scorer agent for the project-improver plugin.
+You are the quality-scorer agent for the idm-engineering-plugin.
 
 Project path: <project>
 Tier: <tier>
@@ -84,7 +84,7 @@ Return ONLY a JSON object (no other text):
 
 ### usability-scorer prompt:
 ```
-You are the usability-scorer agent for the project-improver plugin.
+You are the usability-scorer agent for the idm-engineering-plugin.
 
 Project path: <project>
 Tier: <tier>
@@ -121,7 +121,7 @@ Return ONLY a JSON object (no other text). Include only non-N/A metrics:
 
 ### safety-scorer prompt:
 ```
-You are the safety-scorer agent for the project-improver plugin.
+You are the safety-scorer agent for the idm-engineering-plugin.
 
 Project path: <project>
 Tier: <tier>
@@ -239,7 +239,7 @@ Give N/A metrics (Tier 3: `powerful`, `accessible`) a score of 10.
 
 ## Step 6: Generate Recommendations
 
-Before writing the file, synthesize 3–8 concrete, actionable recommendations ranked by impact (score × weight). Each recommendation should:
+Before writing the file, synthesize 3–8 concrete, actionable recommendations ranked by impact (score x weight). Each recommendation should:
 - Name the specific metric it improves
 - Be specific and implementable (e.g., "Add a `tests/` directory with pytest tests for the three main functions" not "add tests")
 - Note if it is quick (minutes), medium (hours), or large (days) effort
