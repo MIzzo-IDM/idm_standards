@@ -2,7 +2,7 @@
 
 ## Overview
 
-The table of contents (TOC) controls the structure and labeling of the documentation site navigation. This reference covers shared principles that apply to all projects, followed by tool-specific implementation guidance for MkDocs Material and Quarto.
+The table of contents (TOC) controls the structure and labeling of the documentation site navigation. This reference covers shared principles that apply to all projects, followed by tool-specific implementation guidance for MkDocs with Material theme and Quarto.
 
 ## Shared principles
 
@@ -10,26 +10,27 @@ The table of contents (TOC) controls the structure and labeling of the documenta
 
 Order top-level sections to match the user's journey through the documentation:
 
-| Position | Section | Purpose | Diataxis type |
-|----------|---------|---------|---------------|
-| 1 | Home | Entry point and orientation | — |
-| 2 | Software overview | Orient the user to the product | Explanation |
-| 3 | Get started | First hands-on experience | Tutorial |
-| 4 | Tutorials | Guided learning experiences | Tutorial |
-| 5 | How-to guides | Task-oriented directions | How-to |
-| 6 | Explanation / Concepts | Background understanding | Explanation |
-| 7 | Reference / API reference | Technical lookup | Reference |
-| 8 | Standard pages | Code of conduct, contribution guide, changelog | — |
+- Home
+- Software overview (explanation)
+  - Installation (how-to)
+  - Architecture overview (reference)
+  - Feature A (explanation)
+    - How to implement (how-to)
+  - Feature B (explanation)
+    - How to implement (how-to)
+- Explanation/concepts (explanation)
+  - How to implement a concept (how-to)
+- Tutorials (tutorial)
+- Reference/API reference (reference)
+- Standard pages
 
-Not every project needs all sections — omit any that don't apply. Use the Diataxis type column to guide decisions: if a section doesn't fit one of the four types, consider whether it belongs in an existing section instead.
-
-**Note:** "Home" or "Get started" sections may include installation or setup steps that resemble how-to guides. Keep these as brief as possible and link to how-to guides for detail — the goal is to get the learner to their first success quickly, not to document every setup option.
+Not every project needs all sections, omit any that don't apply. How-to guides for a particular feature always appear as subsections under a relevant parent section, never as a standalone top-level section. Explanation of concepts appear before tutorials so users have conceptual grounding before hands-on practice.
 
 ### Naming conventions
 
 - Use sentence case for nav display labels: `Get started`, `API reference`, `How-to guides`
 - Use lowercase, hyphenated folder and file names: `get-started/`, `how-to-guides/`
-- Be concise — one to three words per label where possible
+- Be concise, one to three words per label where possible
 - Match folder names to nav labels where possible: `tutorials/` → `Tutorials:`
 
 ### Hierarchy rules
@@ -74,7 +75,7 @@ Add cross-references when:
 ### Jupyter notebooks
 
 Tutorials written as Jupyter notebooks should be:
-- Placed under a `Notebooks:` subsection within `Tutorials:`
+- Placed under a `Notebooks:` subsection within `Tutorials:` if there are non-notebook tutorials. Otherwise they should be within `Tutorials`.
 - Given explicit human-readable labels in the nav — notebook filenames are often not readable on their own
 - Prefixed with zero-padded numbers when sequence matters: `01_intro.ipynb`, `02_next.ipynb`
 - Configured to execute during the documentation build so broken notebooks surface as build failures rather than silent errors (see tool-specific guidance below)
@@ -173,9 +174,6 @@ nav:
     - Notebooks:
       - Tutorial one: tutorials/notebooks/01_tutorial.ipynb
       - Tutorial two: tutorials/notebooks/02_tutorial.ipynb
-  - How-to guides:
-    - how-to/index.md
-    - how-to/configure.md
   - API reference: reference/
   - Code of conduct: code_of_conduct.md
   - Contribution guide: contribute.md
@@ -283,10 +281,6 @@ website:
                 file: tutorials/notebooks/01_tutorial.ipynb
               - text: "Tutorial two"
                 file: tutorials/notebooks/02_tutorial.ipynb
-      - section: How-to guides
-        contents:
-          - how-to/index.qmd
-          - how-to/configure.qmd
       - section: API reference
         contents:
           - reference/index.qmd
